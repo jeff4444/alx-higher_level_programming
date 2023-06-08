@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 def main():
     import add_0 as add_func
     a = 1
