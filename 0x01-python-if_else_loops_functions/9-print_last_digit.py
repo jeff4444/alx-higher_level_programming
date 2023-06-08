@@ -12,5 +12,5 @@ def print_last_digit(number):
         print("{}".format(int(last * 10)), end="")
     print("{}".format(int(last * 10)), end="")
     if sign == -1:
-        return (int(last * 100) + int(last * 10))
+        return (int(last * 10) * 10 + int(last * 10))
     return (int(last * 10))
