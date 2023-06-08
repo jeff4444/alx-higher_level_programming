@@ -10,4 +10,4 @@ def print_last_digit(number):
     last = num - decimal
     if sign == -1:
         print("{}".format(int(last * 10)), end="")
-    print("{}".format(int(last * 10)))
+    print("{}".format(int(last * 10)), end="")
