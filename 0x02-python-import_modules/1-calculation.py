@@ -7,5 +7,7 @@ def main():
     print("{} - {} = {}".format(a, b, calc.sub(a, b)))
     print("{} * {} = {}".format(a, b, calc.mul(a, b)))
     print("{} / {} = {}".format(a, b, calc.div(a, b)))
+
+
 if __name__ == "__main__":
     main()
