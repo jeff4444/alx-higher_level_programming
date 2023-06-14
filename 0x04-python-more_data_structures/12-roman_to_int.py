@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     if roman_string is None:
         return 0
-    roman_chars = {
+    roman = {
             'I': 1,
             'V': 5,
             'X': 10,
@@ -14,8 +14,8 @@ def roman_to_int(roman_string):
     num = 0
     for i in range(len(roman_string)):
         if (i < len(roman_string) - 1) and \
-                (roman_chars[roman_string[i + 1]] > roman_chars[roman_string[i]]):
-            num -= roman_chars[roman_string[i]]
+                (roman[roman_string[i + 1]] > roman[roman_string[i]]):
+            num -= roman[roman_string[i]]
         else:
-            num += roman_chars[roman_string[i]]
+            num += roman[roman_string[i]]
     return num
