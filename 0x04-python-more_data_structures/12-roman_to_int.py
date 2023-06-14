@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if roman_string == None:
+    if roman_string is None:
         return 0
     roman_chars = {
             'I': 1,
@@ -13,7 +13,8 @@ def roman_to_int(roman_string):
             }
     num = 0
     for i in range(len(roman_string)):
-        if (i < len(roman_string) - 1) and (roman_chars[roman_string[i + 1]] > roman_chars[roman_string[i]]):
+        if (i < len(roman_string) - 1) and
+        (roman_chars[roman_string[i + 1]] > roman_chars[roman_string[i]]):
             num -= roman_chars[roman_string[i]]
         else:
             num += roman_chars[roman_string[i]]
