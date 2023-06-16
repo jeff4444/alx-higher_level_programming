@@ -9,7 +9,6 @@ for some_file in files:
     if os.path.isfile(some_file):
         _, ext = os.path.splitext(some_file)
         extensions.add(ext)
-print(extensions)
 
 for ext in extensions:
     if ext == '':
