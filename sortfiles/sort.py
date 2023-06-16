@@ -11,7 +11,7 @@ else:
     else:
         print("Your entered a non-valid path")
         sys.exit(1)
-print(len(sys.argv))
+
 files = os.listdir(maindir)
 
 extensions = set()
