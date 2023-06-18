@@ -13,17 +13,17 @@ def valid_link(link):
 
 # requests choice of resolution
 def request_res(resolutions):
-    resolution = int(input("Select the number curresponding to your download quality: "))
+    resolution = int(input("Select the number curresponding to your download quality: ").strip())
     while resolution not in list(range(1, len(resolutions) + 1)):
         print("Invalid option chosen")
-        resolution = int(input("Select the number curresponding to your download quality: "))
+        resolution = int(input("Select the number curresponding to your download quality: ").strip())
     return resolution
 
 # main function
 def main():
     # get the YT video link
     if len(sys.argv) != 2:
-        link = input("Enter video link: ")
+        link = input("Enter video link: ").strip()
     else:
         link = sys.argv[1]
 
@@ -36,10 +36,10 @@ def main():
 
     # Ask user if they got the right video
     print("Video Title:", video.title)
-    ans = input("Is that the video you want to download?(Y/N) ").upper()
+    ans = input("Is that the video you want to download?(Y/N) ").upper().strip()
     while ans not in "YN":
         print("Error! Enter either Y or N")
-        ans = input("Is that the video you want to download?(Y/N) ").upper()
+        ans = input("Is that the video you want to download?(Y/N) ").upper().strip()
     if ans == 'N':
         print("Thanks for confirming, Download stopped!")
         return 0
@@ -62,15 +62,15 @@ def main():
         video_stream = video_streams.get_by_resolution(resolutions[resolution - 1])
 
     # Gets the path to download the video
-    ans = input("Do you want to download in this directory?(Y/N) ").upper()
+    ans = input("Do you want to download in this directory?(Y/N) ").upper().strip()
     while ans not in "YN":
         print("Error! Enter either Y or N")
-        ans = input("Do you want to download in this directory?(Y/N) ").upper()
+        ans = input("Do you want to download in this directory?(Y/N) ").upper().strip()
     if ans == 'N':
-        path = input("Enter absolute path to download directory: ")
+        path = input("Enter absolute path to download directory: ").strip()
         while not os.path.isdir(path):
             print("Not a valid path")
-            path = input("Enter absolute path to download directory: ")
+            path = input("Enter absolute path to download directory: ").strip()
 
     # Download video
     print("Downloading...")
