@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             avg = 0
             print('out of range')
-        except ValueError:
+        except (ValueError, TypeError):
             avg = 0
             print('wrong type')
         finally:
