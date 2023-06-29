@@ -5,5 +5,5 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         avg = None
     finally:
-        print(f'Inside result: {avg}')
+        print('Inside result: {}'.format(avg))
     return avg
