@@ -33,7 +33,6 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         self.__height = height
 
-
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle"""
         self.width = width
