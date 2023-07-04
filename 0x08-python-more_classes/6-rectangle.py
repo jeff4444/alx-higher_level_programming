@@ -6,6 +6,7 @@ class Rectangle:
     """Creates a rectangle"""
 
     number_of_instances = 0
+
     @property
     def width(self):
         """Get width"""
@@ -36,7 +37,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle"""
-        number_of_instances += 1
+        self.number_of_instances += 1
         self.__width = width
         self.__height = height
 
@@ -69,5 +70,5 @@ class Rectangle:
 
     def __del__(self):
         """Deletes instance"""
-        number_of_instances -= 1
+        self.number_of_instances -= 1
         print('Bye rectangle...')
