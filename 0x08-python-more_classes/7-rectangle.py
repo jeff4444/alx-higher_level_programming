@@ -6,7 +6,7 @@ class Rectangle:
     """Creates a rectangle"""
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     @property
     def width(self):
@@ -59,7 +59,10 @@ class Rectangle:
         string = ''
         for i in range(self.__height):
             for _ in range(self.__width):
-                string += str(print_symbol)
+                if not isinstance(self.print_symbol, str):
+                    string += repr(self.print_symbol)
+                else:
+                    string += self.print_symbol
             if i != self.__height - 1:
                 string += '\n'
         return string
