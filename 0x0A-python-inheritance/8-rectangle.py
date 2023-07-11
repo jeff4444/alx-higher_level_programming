@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from '7-base_geometry' import BaseGeometry
+# from '7-base_geometry' import BaseGeometry
 """Rectangle"""
 
 
