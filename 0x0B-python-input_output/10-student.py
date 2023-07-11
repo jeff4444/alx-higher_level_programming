@@ -15,5 +15,5 @@ class Student:
         """Return sthe json object of self"""
         if attrs is None:
             return self.__dict__
-        return dict(list(filter((lambda x: return x[0] in attrs),
+        return dict(list(filter((lambda x: x[0] in attrs),
                     self.__dict__.items())))
