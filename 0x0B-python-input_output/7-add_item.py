@@ -4,8 +4,10 @@
 
 import json
 import sys
+
+
 def main():
-    """main func"""
+    """main function, will load, add and save object to json"""
     filename = 'add_item.json'
     with open(filename, 'r', encoding='utf-8') as f:
         try:
@@ -16,6 +18,6 @@ def main():
             cur_obj.append(sys.argv[i])
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(cur_obj, f)
-            
+
 
 main()
