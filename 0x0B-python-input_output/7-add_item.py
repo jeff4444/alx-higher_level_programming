@@ -5,6 +5,7 @@
 import json
 import sys
 def main():
+    """main func"""
     filename = 'add_item.json'
     with open(filename, 'r', encoding='utf-8') as f:
         try:
