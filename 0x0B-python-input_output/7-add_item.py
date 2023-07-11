@@ -7,6 +7,8 @@ import sys
 
 
 filename = 'add_item.json'
+with open(filename, 'w', encoding='utf-8') as f:
+    pass
 with open(filename, 'r', encoding='utf-8') as f:
     try:
         cur_obj = json.load(f)
