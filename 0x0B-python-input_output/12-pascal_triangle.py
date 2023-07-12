@@ -16,8 +16,8 @@ def pascal_triangle(n):
             my_list = [1]
             triangle.append(my_list)
             continue
-        for j in range(i + 1):
-            if r == i:
+        for j in range(i):
+            if r == i - 1:
                 my_list.append(prev_list[l])
             elif l == -1:
                 my_list.append(prev_list[r])
@@ -27,3 +27,5 @@ def pascal_triangle(n):
             r += 1
         triangle.append(my_list)
     return triangle
+
+print(pascal_triangle(5))
