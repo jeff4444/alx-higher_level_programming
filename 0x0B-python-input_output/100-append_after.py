@@ -3,6 +3,7 @@
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """Append in between texts in a file"""
     with open(filename, 'r', encoding='utf-8') as f:
         read = f.read()
         f.seek(0)
