@@ -12,9 +12,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_init(self):
         """test the init method of Rectangle"""
-        r1 = Rectangle(1, 2, 3, 4, 1)
+        r = Rectangle(1, 2)
+        out = [r.width, r.height, r.x, r.y, r.id] 
+        inp = [1, 2, 0, 0, 5]
+        self.assertEqual(out, inp)
+        r1 = Rectangle(1, 2, 3, 4)
         out = [r1.width, r1.height, r1.x, r1.y, r1.id]
-        inp = [1, 2, 3, 4, 1]
+        inp = [1, 2, 3, 4, 6]
         self.assertEqual(out, inp)
         r2 = Rectangle(1, 2, 0, 0, 2)
         out = [r2.width, r2.height, r2.x, r2.y, r2.id]
