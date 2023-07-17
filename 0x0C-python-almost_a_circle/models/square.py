@@ -2,7 +2,9 @@
 """Square"""
 
 
-Rectangle = __import__('rectangle').Rectangle
+from models.rectangle import Rectangle
+
+
 class Square(Rectangle):
     """square class"""
 
@@ -12,16 +14,40 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__width
+        """gets size"""
+        return self.width
 
     @size.setter
     def size(self, val):
+        """sets size"""
         if type(val) != int:
             raise TypeError('size must be an integer')
         if val <= 0:
             raise ValueError('size must be > 0')
-        self.__width = val
-        self.__height = val
+        self.width = val
+        self.height = val
 
     def __str__(self):
-        return f'[Square] ({self.id}) {self.x}/{self.y} - {self.width}'
+        """Recturns str(Square) in desired form"""
+        return f'[Square] ({self.id}) {self.x}/{self.y} - {self.size}'
+
+    def update(self, *args, **kwargs):
+        """Updates Square instance"""
+        if args:
+            attrs = ['id', 'size', 'x', 'y']
+            i = 0
+            for arg in args:
+                setattr(self, attrs[i], arg)
+                i += 1
+        else:
+            for key, val in kwargs.items():
+                setattr(self, key, val)
+
+    def to_dictionary(self):
+        """Returns dict object of instance"""
+        dic = {}
+        dic['x'] = self.x
+        dic['y'] = self.y
+        dic['size'] = self.height
+        dic['id'] = self.id
+        return dic
