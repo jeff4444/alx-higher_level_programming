@@ -25,6 +25,9 @@ class TestRectangle(unittest.TestCase):
         """test the setters in Rectangle"""
         self.assertRaises(TypeError, Rectangle, 1, '2')
         self.assertRaises(TypeError, Rectangle, [1], 2)
+        self.assertRaises(TypeError, Rectangle, (1, ), 2)
+        self.assertRaises(TypeError, Rectangle, True, 2)
+        self.assertRaises(TypeError, Rectangle, None, 2)
         self.assertRaises(ValueError, Rectangle, -1, 1)
         self.assertRaises(ValueError, Rectangle, 1, 0)
         self.assertRaises(ValueError, Rectangle, 1, 1, -1)
