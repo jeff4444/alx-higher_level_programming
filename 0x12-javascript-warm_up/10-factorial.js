@@ -5,7 +5,7 @@ function factorial(n) {
   }
   return (n * factorial(n - 1));
 }
-let x = Number(process.argv[2]);
+const x = Number(process.argv[2]);
 if (!x) {
   console.log(1);
 } else {

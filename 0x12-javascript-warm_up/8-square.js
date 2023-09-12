@@ -1,5 +1,5 @@
 #!/usr/bin/node
-let size = Number(process.argv[2]);
+const size = Number(process.argv[2]);
 if (!size) {
   console.log('Missing size');
 } else {
